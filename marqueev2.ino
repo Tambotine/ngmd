@@ -219,4 +219,5 @@ void manualchange()
       delay (500); //Rudimentary debouncing assuming its needed.
      
     }
+   digitalWrite(lightpinarray[lightnumber], HIGH); //Keep the light on even if no button is changed.
 }
