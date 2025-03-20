@@ -216,6 +216,7 @@ void manualchange()
         
       digitalWrite(lightpinarray[lightnumber], HIGH); //Now just turn the correct lamp on.
       
+      delay (500); //Rudimentary debouncing assuming its needed.
      
     }
 }
