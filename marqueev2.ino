@@ -206,7 +206,7 @@ void manualchange() {
     if(changebutton == HIGH); {
       lightnumber++;
       if(lightnumber >= totallights); {
-        lightnumber = 1;
+        lightnumber = 0; //Shouldnt it start from 0 to 5
       }
 
         // Turn off all the lights first
