@@ -201,9 +201,9 @@ void attractmode() {
 
 
 
-void manualchange() {
-  digitalRead(changebutton);
-    if(changebutton == HIGH); {
+void manualchange() 
+{
+    if(digitalRead(changebutton) == HIGH); {
       lightnumber++;
       if(lightnumber >= totallights); {
         lightnumber = 0; //Shouldnt it start from 0 to 5
