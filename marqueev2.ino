@@ -199,16 +199,7 @@ void attractmode() {
   digitalWrite (lightout6, LOW);
 }
 
-void manuallight(int index) {
-    for (int i = 1; i < totallights; i++){
-      if (i == index) {
-        digitalWrite(lightpinarray[i], HIGH);
-      }
-      else {
-        digitalWrite(lightpinarray[i], LOW);
-      }
-      }
-}
+
 
 void manualchange() {
   digitalRead(changebutton);
@@ -217,6 +208,14 @@ void manualchange() {
       if(lightnumber >= totallights); {
         lightnumber = 1;
       }
-      manuallight(lightnumber);
+
+        // Turn off all the lights first
+      for (int i = 0; i < totallights; i++) {
+        digitalWrite(lightpinarray[i], LOW);
+      }
+        
+      digitalWrite(lightpinarray[lightnumber], HIGH); //Now just turn the correct lamp on.
+      
+     
     }
 }
