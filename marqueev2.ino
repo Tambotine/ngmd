@@ -203,7 +203,7 @@ void attractmode() {
 
 void manualchange() 
 {
-  while (TRUE) {        //Keep checking the change button.
+  while (TRUE) {        //Keep checking the change button if manual change function is running
    
     if(digitalRead(changebutton) == HIGH) {
       lightnumber++;
